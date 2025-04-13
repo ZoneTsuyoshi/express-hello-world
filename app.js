@@ -1,9 +1,9 @@
-// const express = require("express");
-// const { Server } = require("boardgame.io/server");
-// const { TicTacToe } = require("./game");
-import express from "express";
-import { Server } from "boardgame.io/dist/cjs/server.js";
-import { TicTacToe } from "./game.js";
+const express = require("express");
+const { Server } = require("boardgame.io/server");
+const { TicTacToe } = require("./game");
+// import express from "express";
+// import { Server } from "boardgame.io/dist/cjs/server.js";
+// import { TicTacToe } from "./game.js";
 
 const app = express();
 const port = process.env.PORT || 3001;
