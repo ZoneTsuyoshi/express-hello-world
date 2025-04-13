@@ -1,6 +1,6 @@
 const express = require("express");
 const { Server } = require("boardgame.io/server");
-const { TicTacToe } = require("game");
+const { TicTacToe } = require("./game");
 
 const app = express();
 const port = process.env.PORT || 3001;
