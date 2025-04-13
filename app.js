@@ -1,7 +1,7 @@
 // const express = require("express");
 // const { Server } = require("boardgame.io/server");
 // const { TicTacToe } = require("./game");
-import { express } from "express";
+import express from "express";
 import { Server } from "boardgame.io/dist/cjs/server.js";
 import { TicTacToe } from "./game.js";
 
