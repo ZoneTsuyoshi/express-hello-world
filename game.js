@@ -63,4 +63,4 @@ const TicTacToe = {
   };
 
 
-module.exports = TicTacToe;
+module.exports = { TicTacToe };
