@@ -5,19 +5,23 @@ const { TicTacToe } = require("./game");
 // import { Server } from "boardgame.io/dist/cjs/server.js";
 // import { TicTacToe } from "./game.js";
 
-const app = express();
+// const app = express();
 const port = process.env.PORT || 3001;
 
-app.get("/", (req, res) => res.type('html').send(html));
+// app.get("/", (req, res) => res.type('html').send(html));
 
 // boardgame.io サーバー設定
-const gameServer = Server({ games: [TicTacToe] });
-app.use("/games", gameServer);
+const gameServer = Server({ 
+  games: [TicTacToe],
+  origins: ['*'],
+});
+gameServer.run(port);
+// app.use("/games", gameServer);
 
-const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+// const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
-server.keepAliveTimeout = 120 * 1000;
-server.headersTimeout = 120 * 1000;
+// server.keepAliveTimeout = 120 * 1000;
+// server.headersTimeout = 120 * 1000;
 
 const html = `
 <!DOCTYPE html>
