@@ -1,4 +1,4 @@
-import { INVALID_MOVE } from 'boardgame.io/dist/cjs/core.js';
+import { INVALID_MOVE } from 'boardgame.io/core';
 
 export const TicTacToe = {
     setup: () => ({ cells: Array(9).fill(null) }),
