@@ -1,8 +1,15 @@
 const express = require("express");
+const { Server } = require("boardgame.io/server");
+const { TicTacToe } = require("boardgame.io/examples");
+
 const app = express();
 const port = process.env.PORT || 3001;
 
 app.get("/", (req, res) => res.type('html').send(html));
+
+// boardgame.io サーバー設定
+const gameServer = Server({ games: [TicTacToe] });
+app.use("/games", gameServer);
 
 const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
